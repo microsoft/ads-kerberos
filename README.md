@@ -46,6 +46,15 @@ npm test
 
 NOTE: The test suite requires an active kerberos deployment, see `test/scripts/travis.sh` to better understand these requirements.
 
+### Releasing
+
+Release a new version of the extension by:
+
+1. Running `npm release`
+2. Pushing release commit to repo
+3. The release will be created in Github automatically by the CD pipeline, go to it and download the package artifact (tgz)
+4. Run `npm publish <path to tarball>`
+
 # Documentation
 
 ## Classes
@@ -120,7 +129,7 @@ security could be compromised if you do.</p>
 
 Processes a single kerberos client-side step using the supplied server challenge.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="KerberosClient+wrap"></a>
 
 ### *kerberosClient*.wrap(challenge, [options], [callback])
@@ -134,7 +143,7 @@ Processes a single kerberos client-side step using the supplied server challenge
 
 Perform the client side kerberos wrap step.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="KerberosClient+unwrap"></a>
 
 ### *kerberosClient*.unwrap(challenge, [callback])
@@ -146,7 +155,7 @@ Perform the client side kerberos wrap step.
 
 Perform the client side kerberos unwrap step
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="KerberosServer"></a>
 
 ## KerberosServer
@@ -170,7 +179,7 @@ Perform the client side kerberos unwrap step
 
 Processes a single kerberos server-side step using the supplied client data.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="checkPassword"></a>
 
 ## checkPassword(username, password, service, [defaultRealm], [callback])
@@ -199,7 +208,7 @@ IMPORTANT: This method is vulnerable to KDC spoofing attacks and it should
 only be used for testing. Do not use this in any production system - your
 security could be compromised if you do.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="principalDetails"></a>
 
 ## principalDetails(service, hostname, [callback])
@@ -214,7 +223,7 @@ This function returns the service principal for the server given a service type 
 
 Details are looked up via the `/etc/keytab` file.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="initializeClient"></a>
 
 ## initializeClient(service, [options], [callback])
@@ -230,7 +239,7 @@ Details are looked up via the `/etc/keytab` file.
 
 Initializes a context for client-side authentication with the given service principal.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
 <a name="initializeServer"></a>
 
 ## initializeServer(service, [callback])
@@ -242,4 +251,4 @@ Initializes a context for client-side authentication with the given service prin
 
 Initializes a context for server-side authentication with the given service principal.
 
-**Returns**: <code>Promise</code> - returns Promise if no callback passed  
+**Returns**: <code>Promise</code> - returns Promise if no callback passed
