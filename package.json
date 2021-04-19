@@ -1,5 +1,5 @@
 {
-  "name": "ads-kerberos",
+  "name": "@microsoft/ads-kerberos",
   "version": "1.1.3",
   "description": "Kerberos library for Node.js for use in Azure Data Studio",
   "main": "index.js",
