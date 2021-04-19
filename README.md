@@ -50,7 +50,7 @@ NOTE: The test suite requires an active kerberos deployment, see `test/scripts/t
 
 Release a new version of the extension by:
 
-1. Running `npm release`
+1. Running `npm run release`
 2. Pushing release commit to repo
 3. The release will be created in Github automatically by the CD pipeline, go to it and download the package artifact (tgz)
 4. Run `npm publish <path to tarball>`
