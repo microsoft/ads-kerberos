@@ -1,0 +1,51 @@
+{
+  "name": "ads-kerberos",
+  "version": "1.1.3",
+  "description": "Kerberos library for Node.js for use in Azure Data Studio",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/ads-kerberos.git"
+  },
+  "keywords": [
+    "kerberos",
+    "security",
+    "authentication"
+  ],
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-string": "^1.5.0",
+    "clang-format": "^1.2.4",
+    "dmd-clear": "^0.1.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.2.0",
+    "mongodb": "^3.2.5",
+    "prebuild": "^7.6.2",
+    "prebuild-ci": "^2.2.3",
+    "prettier": "^1.17.1",
+    "request": "^2.88.0",
+    "segfault-handler": "^1.2.0",
+    "standard-version": "^4.4.0"
+  },
+  "scripts": {
+    "format-cxx": "git-clang-format",
+    "format-js": "prettier --print-width 100 --tab-width 2 --single-quote --write index.js 'test/**/*.js' 'lib/**/*.js'",
+    "lint": "eslint index.js lib test",
+    "precommit": "check-clang-format",
+    "test": "mocha ./test && prebuild-ci",
+    "docs": "jsdoc2md --template etc/README.hbs --plugin dmd-clear --files lib/kerberos.js > README.md",
+    "rebuild": "prebuild --compile",
+    "prebuild": "prebuild --all --strip --verbose",
+    "release": "standard-version -i HISTORY.md"
+  },
+  "author": "Microsoft",
+  "license": "Apache-2.0",
+  "readmeFilename": "README.md",
+  "gitHead": "035be2e4619d7f3d7ea5103da1f60a6045ef8d7c"
+}
