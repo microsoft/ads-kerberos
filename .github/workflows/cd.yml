@@ -15,8 +15,6 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v1
-    - name: Install Dependencies
-      run: npm install --no-save
     - name: Create Package
       run: npm pack
     - name: Create Release
