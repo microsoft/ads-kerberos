@@ -24,7 +24,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^2.6.2",
     "jsdoc-to-markdown": "^4.0.1",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "mongodb": "^3.2.5",
     "prebuild": "^7.6.2",
     "prebuild-ci": "^2.2.3",
