@@ -21,7 +21,7 @@
     "chai-string": "^1.5.0",
     "clang-format": "^1.2.4",
     "dmd-clear": "^0.1.2",
-    "eslint": "^5.16.0",
+    "eslint": "^9.39.1",
     "eslint-plugin-prettier": "^2.6.2",
     "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^5.2.0",
